@@ -13,8 +13,8 @@ int c;
 	{
 	if (c != 50)
 	if (c != 52)
-	}
+	
 	putchar(c);
-
+	}
 _putchar('\n');
 }
