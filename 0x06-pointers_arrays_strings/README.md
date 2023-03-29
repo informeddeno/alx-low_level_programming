@@ -11,3 +11,5 @@ Prototype: int _strcmp(char *s1, char *s2);
 Prototype: void reverse_array(int *a, int n);
 5. function that changes all lowercase letters of a string to uppercase.
 Prototype: char *string_toupper(char *);
+6. function that capitalizes all words of a string.
+Prototype: char *cap_string(char *);
