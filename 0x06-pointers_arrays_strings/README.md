@@ -13,3 +13,7 @@ Prototype: void reverse_array(int *a, int n);
 Prototype: char *string_toupper(char *);
 6. function that capitalizes all words of a string.
 Prototype: char *cap_string(char *);
+7.  function that encodes a string into 1337
+Prototype: char *leet(char *);
+8. function that encodes a string using rot13.
+Prototype: char *rot13(char *);
