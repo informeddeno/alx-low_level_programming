@@ -5,3 +5,7 @@ Prototype: char *_strcat(char *dest, char *src);
 Prototype: char *_strncat(char *dest, char *src, int n);
 2. function that copies a string.
 Prototype: char *_strncpy(char *dest, char *src, int n);
+3. function that compares two strings.
+Prototype: int _strcmp(char *s1, char *s2);
+4. function that reverses the content of an array of integers.
+Prototype: void reverse_array(int *a, int n);
