@@ -17,3 +17,15 @@ Prototype: char *_strpbrk(char *s, char *accept);
 
 5. function that locates a substring.
 Prototype: char *_strstr(char *haystack, char *needle);
+
+6. a function that prints the chessboard.
+Prototype: void print_chessboard(char (*a)[8]);
+
+7. a function that prints the sum of the two diagonals of a square matrix of integers.
+Prototype: void print_diagsums(int *a, int size);
+
+8. a function that sets the value of a pointer to a char.
+Prototype: void set_string(char **s, char *to);
+
+9. a file that contains the password for the crackme2 executable.
+Your file should contain the exact password, no new line, no extra space
