@@ -6,7 +6,9 @@
  */
 size_t print_listint(const listint_t *h)
 {
-size_t item = 0;
+malloc(sizeof(listint_t));
+size_t item;
+item = 0;
 while (h)
 {
 printf("%d\n", h->n);
@@ -18,5 +20,6 @@ printf("Error\n");
 return (1);
 }
 }
+free(listint_t);
 return (item);
 }
