@@ -12,6 +12,12 @@ while (h)
 printf("%d\n", h->n);
 item++;
 h = h->next;
+
+if (NULL)
+{
+printf("Error\n");
+return (1);
+}
 }
 return (item);
 }
