@@ -1,4 +1,4 @@
- #include "lists.h"
+#include "lists.h"
 /**
  * print_listint - prints all the elements of a linked list
  * @h: linked list of type listint_t to print
@@ -6,13 +6,13 @@
  */
 size_t print_listint(const listint_t *h)
 {
-size_t item = 0;
+  size_t item = 0;
 
-while (h)
-{
-printf("%d\n", h->n);
-item++;
-h = h->next;
-}
-return (item);
+  while (h)
+    {
+      printf("%d\n", h->n);
+      item++;
+      h = h->next;
+    }
+  return (item);
 }
