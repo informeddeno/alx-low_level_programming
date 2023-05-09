@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
- * read_textfile- Reads text file 
-* @filename: text file 
+ * read_textfile- Reads text file
+ * @filename: text file
  * @letters: letters to read
  * Return: w- count of bytes read and printed
  *  or  0 when function fails or filename is NULL.
