@@ -2,6 +2,23 @@
 #include <stdlib.h>
 #include "main.h"
 
+unsigned int binary_to_uint(const char *b);
+
+/**
+ * main - entry point of the program
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+	const char *binary = "101010"; /* Example binary number */
+	unsigned int result = binary_to_uint(binary);
+
+	printf("Result: %u\n", result);
+
+	return 0;
+}
+
 /**
  * binary_to_uint - converts a binary number to an unsigned int.
  * @b: string containing the binary number.
@@ -15,31 +32,15 @@ unsigned int binary_to_uint(const char *b)
 	int i;
 
 	if (b == NULL)
-		return (0);
+		return 0;
 
 	for (i = 0; b[i] != '\0'; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
-			return (0);
+			return 0;
 
 		convt = 2 * convt + (b[i] - '0');
 	}
 
-	return (convt);
-}
-
-/**
- * main - entry point of the program
- *
- * Return: Always 0
- */
-int main(void)
-{
-	const char *binary = "101010"; /* Example binary number */
-	unsigned int result;
-
-	result = binary_to_uint(binary);
-	printf("Result: %u\n", result);
-
-	return (0);
+	return convt;
 }
