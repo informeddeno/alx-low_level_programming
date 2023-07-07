@@ -6,9 +6,7 @@
  *
  * Return: Always 0.
  */
-unsigned int binary_to_uint()
 
-{
     unsigned int n;
 
     n = binary_to_uint("1");
@@ -21,5 +19,4 @@ unsigned int binary_to_uint()
     printf("%u\n", n);
     n = binary_to_uint("0000000000000000000110010010");
     printf("%u\n", n);
-    return (0);
-}
+    
