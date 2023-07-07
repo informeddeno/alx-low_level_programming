@@ -6,7 +6,7 @@
  *
  * Return: Always 0.
  */
-unsigned int binary_to_uint(const char *b);
+unsigned int binary_to_uint(const char *b)
 {
     unsigned int n;
 
