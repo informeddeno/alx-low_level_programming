@@ -10,8 +10,6 @@ int main(void)
 {
     unsigned int n;
 
-    unsigned int binary_to_uint(const char *b);
-
     n = binary_to_uint("1");
     printf("%u\n", n);
     n = binary_to_uint("101");
