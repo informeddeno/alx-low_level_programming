@@ -6,6 +6,8 @@
  *
  * Return: Always 0.
  */
+unsigned int binary_to_uint(void)
+
 {
     unsigned int n;
 
