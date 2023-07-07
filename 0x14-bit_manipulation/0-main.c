@@ -7,6 +7,7 @@
  * Return: Always 0.
  */
 
+(unsigned int binary_to_uint(const char *b)
     unsigned int n;
 
     n = binary_to_uint("1");
@@ -20,3 +21,4 @@
     n = binary_to_uint("0000000000000000000110010010");
     printf("%u\n", n);
     
+ )
