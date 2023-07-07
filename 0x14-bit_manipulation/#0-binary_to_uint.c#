@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-/**
- * main - entry point of the program
+nt of the program
  *
  * Return: Always 0
  */
