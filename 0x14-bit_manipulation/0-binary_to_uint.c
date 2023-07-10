@@ -3,13 +3,17 @@
 #include "main.h"
 #include <unistd.h>
 
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 int _putchar(char c)
 {
-    return write(1, &c, 1);
+    return (write(1, &c, 1));
 }
-
-
-unsigned int binary_to_uint(const char *b);
 
 /**
  * binary_to_uint - converts a binary number to an unsigned int.
@@ -20,7 +24,7 @@ unsigned int binary_to_uint(const char *b);
  */
 unsigned int binary_to_uint(const char *b)
 {
-    unsigned int dec_val = 0;
+    unsigned int decimal = 0;
     unsigned int i; /* Declare 'i' as unsigned int */
 
     if (!b)
@@ -30,17 +34,21 @@ unsigned int binary_to_uint(const char *b)
     {
         if (b[i] < '0' || b[i] > '1')
             return 0;
-        dec_val = 2 * dec_val + (b[i] - '0');
+        decimal = 2 * decimal + (b[i] - '0');
     }
 
-    return dec_val;
+    return decimal;
 }
 
+/**
+ * main - Entry point of the program.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-    const char *binary = "101010";  /* Example binary number */
-    unsigned int decimal = 0;
-    unsigned int result; /* Move the declaration to the beginning of the function */
+    const char *binary = "101010"; /* Example binary number */
+    unsigned int result = 0;
     unsigned int i; /* Declare 'i' as unsigned int */
 
     if (binary == NULL)
@@ -51,7 +59,7 @@ int main(void)
         if (binary[i] != '0' && binary[i] != '1')
             return 0;
 
-        decimal = 2 * decimal + (binary[i] - '0');
+        result = 2 * result + (binary[i] - '0');
     }
 
     result = binary_to_uint(binary); /* Assign the value here */
