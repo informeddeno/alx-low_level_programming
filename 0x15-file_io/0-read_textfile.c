@@ -1,6 +1,6 @@
+#include <stdlib.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -13,7 +13,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file_descriptor, read_count, write_count;
+	int file_descriptor;
+	ssize_t read_count, write_count;
 	char *buffer;
 
 	if (filename == NULL)
@@ -39,7 +40,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	write_count = write(STDOUT_FILENO, buffer, read_count);
-	if (write_count == -1 || (size_t) write_count < letters)
+	if (write_count == -1 || (ssize_t)write_count != read_count)
 	{
 		free(buffer);
 		close(file_descriptor);
@@ -48,6 +49,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	free(buffer);
 	close(file_descriptor);
-
 	return (write_count);
 }
