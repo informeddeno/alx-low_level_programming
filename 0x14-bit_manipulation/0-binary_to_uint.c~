@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
+
+unsigned int binary_to_uint(const char *b);
+int _putchar(char c);
+
+int main(void)
+{
+    const char *binary = "101010";  /* Example binary number */
+    unsigned int convt = 0;
+    int i;
+
+    if (binary == NULL)
+        return (0);
+
+    for (i = 0; binary[i] != '\0'; i++)
+    {
+        if (binary[i] != '0' && binary[i] != '1')
+            return (0);
+
+        convt = 2 * convt + (binary[i] - '0');
+    }
+
+    unsigned int decimal = binary_to_uint(binary);
+
+    if (decimal == 0)
+        _putchar('0');
+    else
+    {
+        while (decimal > 0)
+        {
+            int remainder = decimal % 10;
+            _putchar(remainder + '0');
+            decimal /= 10;
+        }
+    }
+
+    _putchar('\n');
+
+    return (0);
+}
