@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+#include <unistd.h>
+
+int _putchar(char c)
+{
+    return write(1, &c, 1);
+}
+
 
 unsigned int binary_to_uint(const char *b);
-
-int _putchar(char c);
 
 /**
  * binary_to_uint - converts a binary number to an unsigned int.
