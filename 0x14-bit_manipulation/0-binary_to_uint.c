@@ -16,11 +16,12 @@ int _putchar(char c);
 unsigned int binary_to_uint(const char *b)
 {
     unsigned int dec_val = 0;
+    unsigned int i; /* Declare 'i' as unsigned int */
 
     if (!b)
         return 0;
 
-    for (int i = 0; b[i] != '\0'; i++)
+    for (i = 0; b[i] != '\0'; i++)
     {
         if (b[i] < '0' || b[i] > '1')
             return 0;
@@ -34,7 +35,8 @@ int main(void)
 {
     const char *binary = "101010";  /* Example binary number */
     unsigned int decimal = 0;
-    int i;
+    unsigned int result; /* Move the declaration to the beginning of the function */
+    unsigned int i; /* Declare 'i' as unsigned int */
 
     if (binary == NULL)
         return 0;
@@ -47,7 +49,7 @@ int main(void)
         decimal = 2 * decimal + (binary[i] - '0');
     }
 
-    unsigned int result = binary_to_uint(binary);
+    result = binary_to_uint(binary); /* Assign the value here */
 
     if (result == 0)
         _putchar('0');
@@ -55,7 +57,7 @@ int main(void)
     {
         while (result > 0)
         {
-            int remainder = result % 10;
+            unsigned int remainder = result % 10; /* Declare 'remainder' as unsigned int */
             _putchar(remainder + '0');
             result /= 10;
         }
