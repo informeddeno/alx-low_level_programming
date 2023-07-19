@@ -5,22 +5,34 @@
 #include <string.h>
 
 /**
- * print_error- Prints the error message to stderr.
+ *print_error - Prints the error message to stderr.
  * @msg: The error message to be printed.
  */
 void print_error(const char *msg);
 
 /**
- * copy_file- Copies the content of one file to another file.
+ *copy_file - Copies the content of one file to another file.
  * @file_from: The source file path.
  * @file_to: The destination file path.
+ * Return: 98-can't read, 99-can't write, 0-success.
  */
 int copy_file(const char *file_from, const char *file_to);
+
+/**
+ *print_error - Prints the error message to stderr.
+ *@msg: The error message to be printed.
+ */
 void print_error(const char *msg)
 {
 	write(STDERR_FILENO, msg, strlen(msg));
 }
 
+/**
+ *copy_file - Copies the content of one file to another file.
+ * @file_from: The source file path.
+ * @file_to: The destination file path.
+ *Return: 98-can't read, 99-can't write, 0-success.
+ */
 int copy_file(const char *file_from, const char *file_to)
 {
 	char buf[1024];
@@ -73,15 +85,22 @@ int copy_file(const char *file_from, const char *file_to)
 	return (0);
 }
 
+/**
+ * main - Entry point of the program.
+ *@argc: arguement counter.
+ *@argv: arguement variable.
+ * Return: Always 0.
+ */
+
 int main(int argc, char *argv[])
 {
-  int result;
+int result;
 
-  if (argc != 3)
-	{
-		print_error("Usage: cp file_from file_to\n");
-		return (97); /* Error: Invalid number of arguments */
-	}
+if (argc != 3)
+{
+print_error("Usage: cp file_from file_to\n");
+return (97); /* Error: Invalid number of arguments */
+}
 
 	result = copy_file(argv[1], argv[2]);
 
