@@ -6,6 +6,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+int _putchar(char c);
 void print_error(const char *message);
 int copy_file(const char *source_file, const char *dest_file);
 ssize_t read_textfile(const char *filename, size_t letters);
