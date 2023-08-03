@@ -14,4 +14,3 @@ int append_text_to_file(const char *filename, char *text_content);
 int main(int argc, char *argv[]);
 void exit_error(int exit_code, char *message);
 #endif
-
