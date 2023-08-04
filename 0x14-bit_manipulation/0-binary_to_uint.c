@@ -5,19 +5,23 @@
 
 #include <unistd.h>
 
-/**                                                                    
- *_putchar - writes the character c to stdout                          
- * @c: The character to print                                          
- *                                                                     
- *Return: On success 1.                                                
- * On error, -1 is returned, and errno is set appropriately.           
+/**
+ *putchar- writes the character c to stdout
+ * @c: The character to print
+ *
+ *Return: On success 1.on error, -1 is returned, and errno is set appropriately.
  */
 int _putchar(char c)
 {
 return (write(1, &c, 1));
 }
 
-unsigned int binary_to_uint(const char *b)
+/**
+ *binary_to_uint- converts binary to unit
+ *@b: pointer to binary characher to convert
+ *
+ *Return: decimal
+nsigned int binary_to_uint(const char *b)
 {
 unsigned int decimal = 0;
 unsigned int i; /* Declare 'i' as unsigned int */
