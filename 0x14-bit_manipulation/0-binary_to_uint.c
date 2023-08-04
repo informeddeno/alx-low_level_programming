@@ -47,6 +47,7 @@ int main(void)
 const char *binary = "101010"; /* Example binary number */
 unsigned int result = 0;
 unsigned int i; /* Declare 'i' as unsigned int */
+
 if (binary == NULL)
 return (0);
 
