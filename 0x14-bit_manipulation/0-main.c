@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-    unsigned int n;
-    unsigned int binary_to_uint;
+  unsigned int n;
+  unsigned int binary_to_uint();
 
     n = binary_to_uint("1");
     printf("%u\n", n);
