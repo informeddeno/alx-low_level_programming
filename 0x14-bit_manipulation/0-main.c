@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 
-{
-  unsigned int n;
-  unsigned int binary_to_uint();
 
-    n = binary_to_uint("1");
+unsigned int n;
+
+unsigned int binary_to_uint()
+
+{   n = binary_to_uint("1");
     printf("%u\n", n);
     n = binary_to_uint("101");
     printf("%u\n", n);
