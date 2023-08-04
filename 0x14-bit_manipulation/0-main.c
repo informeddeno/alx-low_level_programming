@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-int binary_to_uint()
+unsigned int binary_to_uint()
 {
 unsigned int n;
     n = binary_to_uint("1"); 
