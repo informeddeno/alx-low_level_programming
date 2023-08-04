@@ -4,13 +4,7 @@
 #include "main.h"
 
 int _putchar(char c);
-/**
- * binary_to_uint - converts a binary number to an unsigned int.
- * @b: string containing the binary number.
- *
- *Return: the converted number, or 0 if one or more chars in the string
- * b that is not 0 or 1, or if b is NULL.
- */
+
 unsigned int binary_to_uint(const char *b)
 {
 unsigned int decimal = 0;
