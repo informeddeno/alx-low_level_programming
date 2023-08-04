@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H                      
 
+unsigned int binary_to_uint(const char *b);
 int _putchar(char c);
 void print_error(const char *message);
 int copy_file(const char *source_file, const char *dest_file);
