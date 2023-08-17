@@ -9,11 +9,10 @@
  * @add_dnodeint_end: adds node type int
  * Return: Always EXIT_SUCCESS.
  */
-add_dnodeint_end();
-
 int main(void)
 {
-    dlistint_t *head;
+
+  dlistint_t *head;
 
     head = NULL;
     add_dnodeint_end(&head, 0);
