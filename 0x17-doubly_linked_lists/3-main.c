@@ -9,7 +9,8 @@
  * @add_dnodeint_end: adds node type int
  * Return: Always EXIT_SUCCESS.
  */
-add_dnodeint_end();
+
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 
 int main(void)
 {
